@@ -21,7 +21,7 @@ function ContactSection() {
         <div className="flex flex-col items-center gap-4 sm:items-start">
           <button
             type="button"
-            className="rounded-full bg-gradient-to-r from-accent to-accent2 px-7 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow-lg"
+            className="rounded-full bg-accent px-7 py-3 font-semibold text-white transition-all duration-300 hover:-translate-y-0.5 hover:brightness-110 hover:shadow-glow-lg"
             onClick={() => setShowEmail((v) => !v)}
           >
             {showEmail ? 'Ocultar Email' : 'Mostrar Email'}
