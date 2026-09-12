@@ -5,6 +5,7 @@ import SkillsSection from './components/SkillsSection';
 import AboutSection from './components/AboutSection';
 import ContactSection from './components/ContactSection';
 import ImageModal from './components/ImageModal';
+import Particles from './components/Particles';
 
 function App() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -14,9 +15,10 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-space font-sans text-white">
+    <div className="relative z-0 min-h-screen bg-space font-sans text-white">
       <div className="stars-bg pointer-events-none fixed inset-0 -z-20 animate-stars" />
-      <div className="aurora-bg pointer-events-none fixed inset-0 -z-10" />
+      <div className="aurora-bg pointer-events-none fixed inset-0 -z-10 animate-aurora" />
+      <Particles />
       <Header />
       <ProjectsSection onImageClick={openImage} />
       <SkillsSection />

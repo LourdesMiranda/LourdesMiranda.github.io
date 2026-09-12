@@ -31,11 +31,16 @@ module.exports = {
           from: { opacity: '0', transform: 'translateY(-10px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
         },
+        auroraDrift: {
+          '0%, 100%': { transform: 'translate(0, 0) scale(1)' },
+          '50%': { transform: 'translate(-3%, 2%) scale(1.08)' },
+        },
       },
       animation: {
         stars: 'stars 500s linear infinite',
         shine: 'shine 1.5s ease-out infinite',
         'fade-in': 'fadeIn 0.3s ease',
+        aurora: 'auroraDrift 20s ease-in-out infinite',
       },
     },
   },
