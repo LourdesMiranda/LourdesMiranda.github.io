@@ -28,7 +28,7 @@ function Header() {
             <div className="pointer-events-none absolute -left-1/2 -top-1/2 h-[200%] w-[200%] rotate-[30deg] opacity-0 transition-opacity duration-500 [background:radial-gradient(circle,rgba(79,195,247,0.8)_0%,rgba(79,195,247,0)_70%)] group-hover:animate-shine group-hover:opacity-100" />
           </div>
           <h1 className="font-display text-lg font-semibold tracking-tight text-white md:text-xl">
-            Hola, soy <span className="bg-gradient-to-r from-accent to-accent2 bg-clip-text text-transparent">Lourdes</span>
+            Hola, soy <span className="bg-gradient-to-r from-accent to-accent2 bg-clip-text">Lourdes</span>
           </h1>
         </div>
 
