@@ -1,19 +1,11 @@
 import React, { useEffect, useState } from 'react';
 
-const LINES = [
-  '$ whoami',
-  '> Lourdes Miranda — Software Engineer',
-  '$ ./cargar-portfolio.sh',
-  '> Listo ✓',
-];
-
-const FULL_TEXT = LINES.join('\n');
-const TYPE_SPEED = 28;
-const HOLD_AFTER = 500;
+const TICK_SPEED = 18;
+const HOLD_AFTER = 350;
 const FADE_DURATION = 400;
 
 function Preloader() {
-  const [charCount, setCharCount] = useState(0);
+  const [progress, setProgress] = useState(0);
   const [fading, setFading] = useState(false);
   const [hidden, setHidden] = useState(false);
 
@@ -26,8 +18,8 @@ function Preloader() {
     document.body.style.overflow = 'hidden';
 
     const interval = setInterval(() => {
-      setCharCount((c) => Math.min(c + 1, FULL_TEXT.length));
-    }, TYPE_SPEED);
+      setProgress((p) => Math.min(p + 1, 100));
+    }, TICK_SPEED);
 
     return () => {
       clearInterval(interval);
@@ -36,7 +28,7 @@ function Preloader() {
   }, []);
 
   useEffect(() => {
-    if (hidden || charCount < FULL_TEXT.length) return undefined;
+    if (hidden || progress < 100) return undefined;
 
     const holdTimer = setTimeout(() => {
       setFading(true);
@@ -48,12 +40,9 @@ function Preloader() {
     }, HOLD_AFTER);
 
     return () => clearTimeout(holdTimer);
-  }, [charCount, hidden]);
+  }, [progress, hidden]);
 
   if (hidden) return null;
-
-  const visibleText = FULL_TEXT.slice(0, charCount);
-  const visibleLines = visibleText.split('\n');
 
   return (
     <div
@@ -61,18 +50,18 @@ function Preloader() {
         fading ? 'opacity-0' : 'opacity-100'
       }`}
     >
-      <pre className="w-full max-w-md px-6 font-mono text-sm leading-relaxed sm:text-base">
-        {LINES.map((line, idx) => {
-          const shown = visibleLines[idx] || '';
-          const isActive = idx === visibleLines.length - 1 && charCount < FULL_TEXT.length;
-          return (
-            <div key={line} className={line.startsWith('$') ? 'text-white/70' : 'text-accent'}>
-              {shown}
-              {isActive && <span className="animate-pulse">▌</span>}
-            </div>
-          );
-        })}
-      </pre>
+      <div className="w-full max-w-xs px-6">
+        <p className="mb-4 text-center text-sm font-medium tracking-wide text-muted">Cargando portfolio...</p>
+        <div className="flex items-center gap-3">
+          <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/10">
+            <div
+              className="h-full rounded-full bg-gradient-to-r from-accent to-accent2"
+              style={{ width: `${progress}%` }}
+            />
+          </div>
+          <span className="w-10 shrink-0 text-right font-mono text-sm text-accent">{progress}%</span>
+        </div>
+      </div>
     </div>
   );
 }
