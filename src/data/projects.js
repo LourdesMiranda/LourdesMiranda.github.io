@@ -67,6 +67,12 @@ const PROJECTS = [
         title: 'Películas 🎬',
         description: 'Accesos directos a recomendaciones por plataforma: Netflix, Prime Video, Max y Disney+.',
       },
+      {
+        src: '/images/blackbook_recommendation.png',
+        alt: 'Modal de recomendaciones de Netflix en Black Books',
+        title: 'Recomendaciones ⭐',
+        description: 'Al pulsar una plataforma se abre un modal con recomendaciones puntuadas y una frase que las resume.',
+      },
     ],
   },
 ];
