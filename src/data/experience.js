@@ -1,10 +1,23 @@
 const EXPERIENCE = [
   {
-    title: 'E-commerce / Front-end',
+    title: 'Software Engineer (Backend)',
     logo: '/images/iskaypet_logo.png',
-    year: '2022-Actualidad',
-    institution: 'Iskaypet',
-    description: 'Programación y maquetación de Landing page, Home, y categorías de las campañas',
+    year: 'jul. 2026 - actualidad',
+    institution: 'Grupo IskayPet',
+  },
+  {
+    title: 'Ecommerce (Frontend)',
+    logo: '/images/iskaypet_logo.png',
+    year: 'sept. 2022 - jul. 2026',
+    institution: 'Grupo IskayPet · Madrid',
+    bullets: [
+      'Programación con HTML5, CSS y JavaScript (front-end): banners promocionales en landing page, home y categorías de las campañas mensuales.',
+      'Creación de newsletters con Marketing Commerce Cloud y difusión al cliente por mailing.',
+      'Investigación de nuevas formas de código para landing pages y templates más atractivos.',
+      'Capturas y clasificación de los banners negociados con proveedores.',
+      'Textos alternativos (alt) para mejorar el SEO y la accesibilidad.',
+      'Análisis de la competencia para detectar mejoras en la web propia.',
+    ],
   },
   {
     title: 'Advertiser Management',

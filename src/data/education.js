@@ -18,6 +18,12 @@ const EDUCATION = [
     institution: 'Udemy',
   },
   { title: 'CSS / HTML', logo: '/images/mimo_logo.png', year: '2025', institution: 'MIMO' },
+  {
+    title: 'Full-Stack Software Development',
+    emoji: '🚀',
+    year: 'oct. 2025 - abr. 2026',
+    institution: '4Geeks Academy España',
+  },
 ];
 
 export default EDUCATION;
