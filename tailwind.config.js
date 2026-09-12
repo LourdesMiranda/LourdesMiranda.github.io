@@ -10,9 +10,7 @@ module.exports = {
       colors: {
         space: '#05070d',
         surface: '#0d1220',
-        'surface-light': '#141b2e',
         accent: '#4fc3f7',
-        'accent-dark': '#26c6da',
         accent2: '#a78bfa',
         muted: '#8b96ab',
       },
@@ -29,26 +27,15 @@ module.exports = {
           '0%': { transform: 'rotate(30deg) translate(-30%, -30%)' },
           '100%': { transform: 'rotate(30deg) translate(30%, 30%)' },
         },
-        pulseScale: {
-          '0%, 100%': { transform: 'scale(1)' },
-          '50%': { transform: 'scale(1.1)' },
-        },
         fadeIn: {
           from: { opacity: '0', transform: 'translateY(-10px)' },
           to: { opacity: '1', transform: 'translateY(0)' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translate(0, 0)' },
-          '50%': { transform: 'translate(20px, -30px)' },
         },
       },
       animation: {
         stars: 'stars 500s linear infinite',
         shine: 'shine 1.5s ease-out infinite',
-        'pulse-scale': 'pulseScale 1s ease-in-out infinite',
         'fade-in': 'fadeIn 0.3s ease',
-        float: 'float 12s ease-in-out infinite',
-        'float-delayed': 'float 14s ease-in-out infinite 2s',
       },
     },
   },
