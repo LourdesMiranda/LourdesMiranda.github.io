@@ -1,46 +1,63 @@
 import React from 'react';
 import PROJECTS from '../data/projects';
+import SectionHeading from './SectionHeading';
 
 function ProjectsSection({ onImageClick }) {
   return (
-    <section id="projects" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-      <h2 className="mb-6 text-3xl font-bold text-accent">Proyectos</h2>
+    <section id="projects" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+      <SectionHeading>Proyectos</SectionHeading>
       <div className="flex flex-col gap-6">
         {PROJECTS.map((project) => (
           <div
             key={project.title}
-            className="rounded-xl border-2 border-accent bg-black/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(79,195,247,0.3)]"
+            className="group rounded-2xl border border-white/10 bg-surface/60 p-6 shadow-glow backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-glow-lg sm:p-8"
           >
-            <a href={project.url} target="_blank" rel="noopener noreferrer" className="mb-4 inline-block">
-              <h3 className="inline-block rounded-full border-2 border-accent bg-accent/20 px-4 py-2 text-lg text-accent transition-all duration-300 hover:-translate-y-0.5 hover:bg-accent/40 hover:shadow-[0_4px_8px_rgba(79,195,247,0.3)] active:translate-y-0">
-                {project.title}
-              </h3>
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mb-5 inline-flex items-center gap-2 font-display text-xl font-bold text-white transition-colors duration-200 hover:text-accent sm:text-2xl"
+            >
+              {project.title}
+              <span className="text-accent transition-transform duration-200 group-hover:translate-x-1">↗</span>
             </a>
-            <p className="mb-3 text-sm leading-relaxed">
-              <b>
-                <u>Proyecto personal</u>
-              </b>{' '}
-              {project.intro}
-            </p>
-            <p className="mb-4 text-sm leading-relaxed">
-              <b>
-                <u>Objetivo:</u>
-              </b>{' '}
-              {project.goal}
-            </p>
 
-            <div className="flex flex-col gap-4">
+            <div className="mb-6 flex flex-col gap-3 text-sm leading-relaxed text-muted sm:text-base">
+              <p>
+                <span className="mr-2 rounded-full bg-accent/10 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-accent">
+                  Proyecto personal
+                </span>
+                {project.intro}
+              </p>
+              <p>
+                <span className="mr-2 rounded-full bg-accent2/10 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-accent2">
+                  Objetivo
+                </span>
+                {project.goal}
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
               {project.images.map((image) => (
-                <div key={image.src} className="flex flex-col items-start gap-4 sm:flex-row">
-                  <img
-                    src={process.env.PUBLIC_URL + image.src}
-                    alt={image.alt}
+                <div key={image.src} className="flex flex-col gap-3">
+                  <div
+                    className="group/img relative cursor-pointer overflow-hidden rounded-xl border border-white/10"
                     onClick={() => onImageClick(image.src, image.alt)}
-                    className="h-[180px] w-full cursor-pointer rounded-md border border-accent object-cover transition-transform duration-300 hover:scale-[1.02] sm:h-[120px] sm:w-[180px]"
-                  />
-                  <div className="flex-1">
-                    <h4 className="mb-1 text-base text-white">{image.title}</h4>
-                    <p className="text-sm leading-relaxed text-gray-300">{image.description}</p>
+                  >
+                    <img
+                      src={process.env.PUBLIC_URL + image.src}
+                      alt={image.alt}
+                      className="h-[190px] w-full object-cover transition-transform duration-500 ease-out group-hover/img:scale-105"
+                    />
+                    <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-space/60 opacity-0 transition-opacity duration-300 group-hover/img:opacity-100">
+                      <span className="rounded-full bg-white/10 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm">
+                        Ver imagen
+                      </span>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="mb-1 text-sm font-semibold text-white">{image.title}</h4>
+                    <p className="text-sm leading-relaxed text-muted">{image.description}</p>
                   </div>
                 </div>
               ))}

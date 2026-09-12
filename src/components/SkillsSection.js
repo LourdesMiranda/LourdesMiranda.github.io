@@ -1,29 +1,30 @@
 import React from 'react';
 import SKILLS from '../data/skills';
+import SectionHeading from './SectionHeading';
 
 function SkillsSection() {
   return (
-    <section id="skills" className="mx-auto max-w-6xl px-4 py-10 sm:px-6">
-      <h2 className="mb-6 text-3xl font-bold text-accent">Habilidades</h2>
-      <div className="skills-scroll flex gap-6 overflow-x-auto pb-4">
+    <section id="skills" className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
+      <SectionHeading>Habilidades</SectionHeading>
+      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 sm:gap-5 lg:grid-cols-5">
         {SKILLS.map((skill) => (
           <div
             key={skill.name}
-            className="group flex min-w-[160px] flex-col items-center rounded-xl border border-accent bg-black/50 p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_8px_16px_rgba(79,195,247,0.3)]"
+            className="group flex flex-col items-center rounded-2xl border border-white/10 bg-surface/60 p-5 shadow-glow backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-glow-lg"
           >
-            <div className="relative flex h-[70px] w-[70px] items-center justify-center overflow-hidden">
+            <div className="relative mb-4 flex h-14 w-14 items-center justify-center overflow-hidden rounded-xl bg-white/5">
               <img
                 src={process.env.PUBLIC_URL + skill.logo}
                 alt={skill.name}
-                className={`h-full w-full object-contain grayscale-[30%] transition-all duration-300 group-hover:grayscale-0 ${
+                className={`h-9 w-9 object-contain grayscale-[30%] transition-all duration-300 group-hover:grayscale-0 ${
                   skill.pulse ? 'group-hover:animate-pulse-scale' : 'group-hover:scale-110'
                 }`}
               />
               <div className="pointer-events-none absolute -left-1/2 -top-1/2 h-[200%] w-[200%] rotate-[30deg] opacity-0 transition-opacity duration-500 [background:radial-gradient(circle,rgba(79,195,247,0.6)_0%,rgba(79,195,247,0)_70%)] group-hover:animate-shine group-hover:opacity-100" />
             </div>
-            <div className="my-3 w-full text-center text-lg font-bold text-accent">{skill.name}</div>
+            <div className="mb-3 text-center text-sm font-semibold text-white">{skill.name}</div>
             <div className="mt-auto w-full">
-              <div className="mb-2 flex justify-between text-xs">
+              <div className="mb-1.5 flex justify-between text-xs text-muted">
                 <span>Nivel</span>
                 <span>{skill.level}%</span>
               </div>

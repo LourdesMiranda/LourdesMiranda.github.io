@@ -14,8 +14,9 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-space text-white">
-      <div className="stars-bg pointer-events-none fixed inset-0 -z-10 animate-stars" />
+    <div className="min-h-screen bg-space font-sans text-white">
+      <div className="stars-bg pointer-events-none fixed inset-0 -z-20 animate-stars" />
+      <div className="aurora-bg pointer-events-none fixed inset-0 -z-10" />
       <Header />
       <ProjectsSection onImageClick={openImage} />
       <SkillsSection />

@@ -8,6 +8,7 @@ html {
 
 body {
   overflow-x: hidden;
+  font-family: 'Plus Jakarta Sans', ui-sans-serif, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -18,25 +19,20 @@ code {
 }
 
 .stars-bg {
-  background: black url('https://www.transparenttextures.com/patterns/stardust.png')
+  background: #05070d url('https://www.transparenttextures.com/patterns/stardust.png')
     repeat top center;
+  opacity: 0.5;
+}
+
+.aurora-bg {
+  background-image:
+    radial-gradient(600px circle at 15% 10%, rgba(79, 195, 247, 0.16), transparent 60%),
+    radial-gradient(500px circle at 85% 25%, rgba(167, 139, 250, 0.14), transparent 60%),
+    radial-gradient(700px circle at 50% 100%, rgba(38, 198, 218, 0.1), transparent 60%);
 }
 
 body.menu-open {
   overflow: hidden;
   position: fixed;
   width: 100%;
-}
-
-.skills-scroll::-webkit-scrollbar {
-  height: 6px;
-}
-
-.skills-scroll::-webkit-scrollbar-track {
-  background: #0a0a0a;
-}
-
-.skills-scroll::-webkit-scrollbar-thumb {
-  background-color: #4fc3f7;
-  border-radius: 4px;
 }
