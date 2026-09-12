@@ -31,6 +31,18 @@ const PROJECTS = [
         title: 'Cómo funciona ⚡',
         description: 'El flujo de 3 pasos que reemplaza el scroll infinito: estado de ánimo → recomendación → disfrutar.',
       },
+      {
+        src: '/images/moodfix_question.png',
+        alt: 'Pantalla de preguntas de MoodFix',
+        title: 'Pregúntame 🎯',
+        description: 'El cuestionario real: 5 pasos rápidos para perfilar el estado de ánimo antes de buscar en el catálogo.',
+      },
+      {
+        src: '/images/moodfix_result.png',
+        alt: 'Recomendación de MoodFix con razón generada por IA',
+        title: 'Recomendación con IA ✨',
+        description: 'El resultado final: el motor determinista filtra el catálogo y Claude Haiku elige la mejor opción y explica por qué.',
+      },
     ],
   },
   {
