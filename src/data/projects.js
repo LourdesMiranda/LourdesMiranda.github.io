@@ -9,12 +9,8 @@ const PROJECTS = [
         body: 'Netflix no tiene un problema de contenido, tiene un problema de decisión: cuantas más opciones hay, más cuesta elegir. MoodFix nace para acortar ese momento — en vez de un catálogo infinito, hace un par de preguntas sobre cómo te sientes y devuelve tres películas concretas.',
       },
       {
-        label: 'Mi contribución',
-        body: 'Formé parte de un equipo de 4 personas (bootcamp) y me centré en el frontend: rediseñé la landing con animaciones, añadí persistencia de las acciones del usuario en cada sesión (marcar como vista, guardar para luego, descartar), y memoria de las recomendaciones ya mostradas para no repetirlas. También integré la IA de recomendación (Claude Haiku, de Anthropic) con la API, construí la pantalla de historial y pulí la navegación general.',
-      },
-      {
-        label: 'Reto técnico',
-        body: 'Detecté que el despliegue se estaba cobrando en mi tarjeta personal en lugar de repartirse entre el equipo. Investigando la causa, vi que los datos de usuario (cuentas, perfiles, favoritos) compartían archivo SQLite con el catálogo de películas, y ambos necesitaban un disco persistente para sobrevivir a cada despliegue — un disco que solo ofrecen los planes de pago de Render. La solución: separar el catálogo (que se reconstruye solo, no necesita persistir) de los datos de usuario, y migrar estos últimos a Turso, una base de datos gratuita compatible con SQLite. Antes de tocar producción, validé todo el flujo — registro, login y favoritos contra la base real — y simulé un reinicio completo del servidor para confirmar que no se perdía ningún dato. Resultado: la app pasó a funcionar 100% gratis sin perder persistencia.',
+        label: 'Objetivo',
+        body: 'Construir en equipo (4 personas, bootcamp) un producto completo de principio a fin: un motor determinista filtra un catálogo local (datos de TMDB) por compatibilidad con el perfil del usuario, y un modelo de IA (Claude Haiku, de Anthropic) elige la mejor opción de esa shortlist y genera una razón personalizada.',
       },
     ],
     stack: ['React + Vite', 'Flask (Python)', 'SQLite / Turso', 'Render', 'Claude API (Anthropic)'],
