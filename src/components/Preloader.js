@@ -18,12 +18,7 @@ function Preloader() {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    if (sessionStorage.getItem('preloaderShown')) {
-      setHidden(true);
-      return undefined;
-    }
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      sessionStorage.setItem('preloaderShown', '1');
       setHidden(true);
       return undefined;
     }
@@ -48,7 +43,6 @@ function Preloader() {
       const fadeTimer = setTimeout(() => {
         setHidden(true);
         document.body.style.overflow = '';
-        sessionStorage.setItem('preloaderShown', '1');
       }, FADE_DURATION);
       return () => clearTimeout(fadeTimer);
     }, HOLD_AFTER);
