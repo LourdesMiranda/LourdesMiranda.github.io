@@ -1,9 +1,13 @@
 const EXPERIENCE = [
   {
-    title: 'Software Engineer (Backend)',
+    title: 'Software Engineer',
     logo: '/images/iskaypet_logo.png',
     year: 'jul. 2026 - actualidad',
     institution: 'Grupo IskayPet',
+    bullets: [
+      'Desarrollo de nuevas funcionalidades, componentes y maquetación web sobre la arquitectura SFRA en Salesforce Commerce Cloud.',
+      'Optimización de flujos de usuario clave y resolución de incidencias para mejorar la experiencia de compra.',
+    ],
   },
   {
     title: 'Ecommerce (Frontend)',
