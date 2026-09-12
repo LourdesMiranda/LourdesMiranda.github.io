@@ -22,7 +22,6 @@ const SKILLS = [
   { name: 'VS Code', emoji: '🖥️', category: 'tools', bg: '#007acc', text: '#ffffff' },
   { name: 'Postman', logo: '/images/icons/postman.svg', category: 'tools', bg: '#ff6c37', text: '#ffffff' },
   { name: 'npm', logo: '/images/icons/npm.svg', category: 'tools', bg: '#8a1f1f', text: '#ffffff' },
-  { name: 'AI-Assisted Development', emoji: '✨', category: 'tools', bg: '#4c1d95', text: '#ffffff' },
 ];
 
 export default SKILLS;
