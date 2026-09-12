@@ -56,17 +56,16 @@ const PROJECTS = [
     ],
     images: [
       {
-        src: '/images/wareframe_fisico.jpeg',
-        alt: 'Wireframes físico',
-        title: 'Wireframe Físico ✏️',
-        description:
-          'Un esquema hecho a mano sobre papel cuadriculado con el objetivo de estructurar los bloques principales de contenido del proyecto.',
+        src: '/images/blackbook_home.png',
+        alt: 'Home de Black Books',
+        title: 'Home 📚',
+        description: 'Buscador de libros y las cuatro categorías destacadas: libro actual, del mes, por época y librería.',
       },
       {
-        src: '/images/wareframe_digital.png',
-        alt: 'Wireframes digital',
-        title: 'Wireframe Digital 💻',
-        description: 'Traslado de Wireframe físico a digital para dar lugar a un layout a través de Figma.',
+        src: '/images/blackbook_movies.png',
+        alt: 'Sección de películas de Black Books',
+        title: 'Películas 🎬',
+        description: 'Accesos directos a recomendaciones por plataforma: Netflix, Prime Video, Max y Disney+.',
       },
     ],
   },
