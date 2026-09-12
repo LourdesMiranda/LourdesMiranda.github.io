@@ -1,5 +1,11 @@
 const EDUCATION = [
   {
+    title: 'Full-Stack Software Development',
+    logo: '/images/4geeks_icon.png',
+    year: 'oct. 2025 - abr. 2026',
+    institution: '4Geeks Academy España',
+  },
+  {
     title: 'Máster en Marketing Digital y Comercio Electrónico',
     logo: '/images/eae_logo.png',
     year: '2020-2022',
@@ -18,12 +24,6 @@ const EDUCATION = [
     institution: 'Udemy',
   },
   { title: 'CSS / HTML', logo: '/images/mimo_logo.png', year: '2025', institution: 'MIMO' },
-  {
-    title: 'Full-Stack Software Development',
-    emoji: '🚀',
-    year: 'oct. 2025 - abr. 2026',
-    institution: '4Geeks Academy España',
-  },
 ];
 
 export default EDUCATION;
