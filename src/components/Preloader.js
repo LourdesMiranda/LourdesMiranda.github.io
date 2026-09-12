@@ -10,11 +10,6 @@ function Preloader() {
   const [hidden, setHidden] = useState(false);
 
   useEffect(() => {
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-      setHidden(true);
-      return undefined;
-    }
-
     document.body.style.overflow = 'hidden';
 
     const interval = setInterval(() => {
@@ -55,7 +50,7 @@ function Preloader() {
         <div className="flex items-center gap-3">
           <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-white/10">
             <div
-              className="h-full rounded-full bg-gradient-to-r from-accent to-accent2"
+              className="h-full rounded-full bg-gradient-to-r from-accent to-accent2 transition-[width] duration-150 ease-linear"
               style={{ width: `${progress}%` }}
             />
           </div>
