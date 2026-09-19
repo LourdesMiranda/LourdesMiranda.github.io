@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import Header from './components/Header';
+import HeroSection from './components/HeroSection';
+import ExperienceSection from './components/ExperienceSection';
 import ProjectsSection from './components/ProjectsSection';
 import SkillsSection from './components/SkillsSection';
-import AboutSection from './components/AboutSection';
+import EducationSection from './components/EducationSection';
 import ContactSection from './components/ContactSection';
 import ImageModal from './components/ImageModal';
 import Particles from './components/Particles';
@@ -22,9 +24,11 @@ function App() {
       <div className="aurora-bg pointer-events-none fixed inset-0 -z-10 animate-aurora" />
       <Particles />
       <Header />
+      <HeroSection />
+      <ExperienceSection />
       <ProjectsSection onImageClick={openImage} />
       <SkillsSection />
-      <AboutSection />
+      <EducationSection />
       <ContactSection />
       <ImageModal image={selectedImage} onClose={() => setSelectedImage(null)} />
     </div>

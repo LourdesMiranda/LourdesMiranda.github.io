@@ -2,11 +2,12 @@ const PROJECTS = [
   {
     title: 'MoodFix',
     url: 'https://moodfix-frontend-m08v.onrender.com/',
+    badge: 'Proyecto en equipo · Bootcamp · IA',
     headline: 'De 40 minutos de scroll a una recomendación en 10 segundos',
     sections: [
       {
         label: 'El problema',
-        body: 'Netflix no tiene un problema de contenido, tiene un problema de decisión: cuantas más opciones hay, más cuesta elegir. MoodFix nace para acortar ese momento — en vez de un catálogo infinito, hace un par de preguntas sobre cómo te sientes y devuelve tres películas concretas.',
+        body: 'En Netflix el problema no suele ser que falte contenido, sino que hay tanto que cuesta elegir. MoodFix acorta ese momento: en vez de un catálogo infinito, hace un par de preguntas sobre cómo te sientes y devuelve tres películas concretas.',
       },
       {
         label: 'Objetivo',
@@ -44,6 +45,7 @@ const PROJECTS = [
   {
     title: 'Black Book🔗',
     url: 'https://lourdesmiranda.github.io/black-books/',
+    badge: 'Proyecto personal · Práctica',
     sections: [
       {
         label: 'Proyecto personal',

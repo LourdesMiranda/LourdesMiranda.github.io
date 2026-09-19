@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
 
 const NAV_LINKS = [
+  { href: '#experience', label: 'Experiencia' },
   { href: '#projects', label: 'Proyectos' },
   { href: '#skills', label: 'Habilidades' },
-  { href: '#about', label: 'Sobre mí' },
+  { href: '#education', label: 'Formación' },
   { href: '#contact', label: 'Contacto' },
 ];
 

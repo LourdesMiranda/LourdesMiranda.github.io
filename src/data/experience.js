@@ -3,6 +3,7 @@ const EXPERIENCE = [
     title: 'Software Engineer',
     logo: '/images/iskaypet_logo.png',
     year: 'jul. 2026 - actualidad',
+    badge: 'Promoción interna',
     institution: 'Grupo IskayPet',
     bullets: [
       'Desarrollo de nuevas funcionalidades, componentes y maquetación web sobre la arquitectura SFRA en Salesforce Commerce Cloud.',

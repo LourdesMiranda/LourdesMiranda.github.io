@@ -17,15 +17,22 @@ function ProjectsSection({ onImageClick }) {
             key={project.title}
             className="group rounded-2xl border border-white/10 bg-surface/60 p-6 shadow-glow backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:border-accent/40 hover:shadow-glow-lg sm:p-8"
           >
-            <a
-              href={project.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 font-display text-xl font-bold text-white transition-colors duration-200 hover:text-accent sm:text-2xl"
-            >
-              {project.title}
-              <span className="text-accent transition-transform duration-200 group-hover:translate-x-1">↗</span>
-            </a>
+            <div className="flex flex-wrap items-center gap-x-3 gap-y-2">
+              <a
+                href={project.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 font-display text-xl font-bold text-white transition-colors duration-200 hover:text-accent sm:text-2xl"
+              >
+                {project.title}
+                <span className="text-accent transition-transform duration-200 group-hover:translate-x-1">↗</span>
+              </a>
+              {project.badge && (
+                <span className="rounded-full border border-white/10 bg-white/5 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-muted">
+                  {project.badge}
+                </span>
+              )}
+            </div>
 
             {project.headline && (
               <p className="mb-5 mt-2 text-base font-medium text-white/90 sm:text-lg">{project.headline}</p>

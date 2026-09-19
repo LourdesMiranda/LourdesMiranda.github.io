@@ -5,7 +5,6 @@ const SKILLS = [
   { name: 'Flask', logo: '/images/icons/flask.svg', category: 'backend', bg: '#1a1a1a', text: '#ffffff' },
   { name: 'SQL', logo: '/images/icons/sql.svg', category: 'backend', bg: '#4a6fa5', text: '#ffffff' },
   { name: 'REST APIs', emoji: '🔌', category: 'backend', bg: '#12141c', text: '#ffffff' },
-  { name: 'Controllers / Services Architecture', emoji: '🏗️', category: 'backend', bg: '#12141c', text: '#ffffff' },
   { name: 'Salesforce B2C Commerce (SFRA)', logo: '/images/salesforce_logo.png', category: 'backend', bg: '#00a1e0', text: '#ffffff' },
 
   // Frontend & UI/UX
